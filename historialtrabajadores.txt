@@ -1,0 +1,39 @@
+--------------------NUEVO ESTUDIANTE--------------------
+                  2024-05-28 00:02:07
+Nombre: prueba 1
+CURP: XXXXXXX
+Fecha de nacimiento: 1111-11-11
+Sexo: M
+Dirección: xxxxxx
+Número de teléfono: 11111
+Correo electrónico: 1@x
+Fecha de ingreso: 0111-11-11
+Número de seguro social: 111111
+Teléfono de emergencia: 1111
+
+--------------------NUEVO ESTUDIANTE--------------------
+                  2024-05-28 00:36:26
+Nombre: prueba 2
+CURP: XXXXXXX
+Fecha de nacimiento: 1111-11-11
+Sexo: X
+Dirección: xxxxxx
+Número de teléfono: 1111111
+Correo electrónico: x@x
+Fecha de ingreso: 1111-11-11
+Número de seguro social: 111111
+Teléfono de emergencia: 11111
+
+--------------------NUEVO ESTUDIANTE--------------------
+                  2024-05-28 01:22:45
+Nombre: prueba 4
+CURP: X
+Fecha de nacimiento: 1111-11-11
+Sexo: M
+Dirección: xxxxxx
+Número de teléfono: 11111
+Correo electrónico: x@x
+Fecha de ingreso: 1111-11-11
+Número de seguro social: 111111
+Teléfono de emergencia: 11111
+

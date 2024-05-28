@@ -1,0 +1,122 @@
+
+
+
+
+
+
+											instalar php
+
+
+
+
+
+
+
+-descomprimir la carpeta php-8.3.7-nts-Win32-vs16-x64
+
+-en C:\Program Files\
+
+-tecla windows, variables de entorno del sistema, variables del sistema
+	dentro de la segunda tabla doble clic en "path"
+
+	escribir C:\Program Files\php-8.3.7-nts-Win32-vs16-x64 y un clic fuera del renglon
+										guardar todo
+    *verificacion
+-windows/cmd:  php -v
+
+
+
+
+
+										Conectar base de datos Microsoft Access
+
+
+# Prerrequisitos
+
+3. **Driver ODBC**: Necesitarás el driver ODBC para Microsoft Access. Asegúrate de tener el driver ODBC adecuado instalado (Microsoft Access Database Engine).
+
+### Pasos
+
+#### 1. Instalar y configurar el Driver ODBC
+
+- **Windows**: Descarga e instala el [Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/details.aspx?id=13255).
+
+#### 2. Configurar la conexión ODBC
+
+1. Abre el **Panel de control** y ve a **Herramientas administrativas**.
+2. Selecciona **Orígenes de datos ODBC**.
+3. En la pestaña **DSN de usuario** o **DSN de sistema**, haz clic en **Agregar**.
+4. Selecciona el driver para Microsoft Access y haz clic en **Finalizar**.
+5. Configura el origen de datos (DSN):
+   - Nombre del origen de datos: Ponle un nombre (por ejemplo, `my_access_db`).
+   - Descripción: Opcional.
+   - Base de datos: Selecciona tu archivo `bd.accdb`.
+
+#### 3. Crear un script PHP para conectar a la base de datos
+
+1. Abre Visual Studio Code y crea un nuevo archivo PHP, por ejemplo, `connect.php`.
+2. Usa el siguiente código para conectar a tu base de datos Access:
+
+```php
+<?php
+// Nombre del DSN configurado en ODBC
+$dsn = 'odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=' . realpath('bd.accdb');
+
+// Usuario y contraseña si es necesario, generalmente no se requieren para Access
+$user = '';
+$password = '';
+
+try {
+    // Crear una nueva instancia de PDO
+    $conn = new PDO($dsn, $user, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    echo "Conexión exitosa a la base de datos!";
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
+```
+
+#### 4. Ejecutar el script PHP
+
+1. Abre una terminal en Visual Studio Code.
+2. Ejecuta el script usando el siguiente comando:
+
+```sh
+php connect.php
+```
+
+Si todo está configurado correctamente, deberías ver el mensaje "Conexión exitosa a la base de datos!".
+
+### Notas Adicionales
+
+- **Ubicación del archivo Access**: Asegúrate de que el archivo `bd.accdb` esté en el directorio correcto. Si está en una ruta diferente, proporciona la ruta completa en `DBQ=`.
+- **Permisos y Seguridad**: Asegúrate de que PHP tenga permisos para acceder al archivo `bd.accdb`.
+- **Depuración**: Si encuentras errores, revisa los mensajes de excepción para obtener más detalles.
+
+Siguiendo estos pasos, deberías poder conectar tu proyecto PHP en Visual Studio Code a una base de datos Microsoft Access.
+
+
+
+
+
+
+
+
+agregar columnas a la base de datos     (registro)
+
+
+id
+nombre
+curp					
+fecha de nacimiento
+sexo
+direccion
+telefono
+correo electronico
+fecha de ingreso
+departamento
+puesto
+numero de seguro social
+telefono de emergencia
